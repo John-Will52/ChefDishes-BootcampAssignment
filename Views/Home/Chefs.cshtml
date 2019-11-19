@@ -1,0 +1,29 @@
+﻿@model List<Chef>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1><a asp-controller="Home" asp-action="Chefs">Chefs</a> | <a asp-controller="Home" asp-action="Dishes">Dishes</a></h1>
+    <a asp-controller="Home" asp-action="NewChef">Add a Chef</a>
+</div>
+<div class="table-hover" class="table-responsive">
+
+    <table class="table">
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th># of Dishes</th>
+        </thead>
+        <tbody>
+            @foreach (var chef in Model)
+            {
+                <tr>
+                    <td>@chef.FirstName @chef.LastName</td>
+                    <td>@chef.Age(@chef.Birthdate)</td>
+                    <td>@chef.Recipes.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
