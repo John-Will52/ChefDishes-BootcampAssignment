@@ -1,2 +1,2 @@
 # ChefDishes-BootcampAssignment
-Backend C# assignment with a cooking theme
+Full-stack (mainly focused on backend) C# assignment with a recipe theme
